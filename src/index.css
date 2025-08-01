@@ -17,3 +17,117 @@ button {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+/*LOADING*/
+/* src/components/LoadingSpinner.css */
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ajusta según el contenedor donde lo uses */
+  width: 100%; /* Ajusta según el contenedor donde lo uses */
+  background-color: rgba(255, 255, 255, 0.585); /* Fondo semitransparente opcional */
+  position: absolute; /* O 'fixed' si quieres que cubra toda la pantalla */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1); /* Color base del spinner */
+  border-top-color: #3498db; /* Color del borde que gira */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Animación de giro */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+p {
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/*CARD**************/
+
+.card-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Ancho fijo para las cartas, ajústalo según necesites */
+  margin: 15px;
+  overflow: hidden; /* Asegura que el contenido no se desborde si es demasiado grande */
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out; /* Animación al pasar el ratón */
+}
+
+.card-container:hover {
+  transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+}
+
+.card-header {
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end; /* Alinea el ID a la derecha */
+}
+
+.card-id {
+  font-size: 0.8em;
+  color: #777;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-name {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Evita que el nombre se rompa en varias líneas */
+  overflow: hidden; /* Oculta el texto si es demasiado largo */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es muy largo */
+}
+
+.card-description {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.card-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
