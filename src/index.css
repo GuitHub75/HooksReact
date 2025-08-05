@@ -18,6 +18,10 @@ button {
     cursor: pointer;
 }
 
+.item-cursor {
+    cursor: pointer;
+}
+
 /*LOADING*/
 /* src/components/LoadingSpinner.css */
 
